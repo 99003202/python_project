@@ -74,3 +74,4 @@ print (m1.m_timing)
 c1 = Customer()
 c1.cust_det()
 c1.cust_tkt()
+
