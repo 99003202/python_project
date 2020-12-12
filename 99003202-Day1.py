@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 global f
 f = 0
 # this name_movie function is used to see movie name
@@ -120,7 +114,3 @@ def city():
     else:
         print("Wrong Choice")
 city()
-
-
-
-
