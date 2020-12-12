@@ -114,4 +114,3 @@ def city():
     else:
         print("Wrong Choice")
 city()
-
