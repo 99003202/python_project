@@ -62,7 +62,7 @@ class Customer(ticket, movie):
     def cust_det(self):
         regex = "91-\d{10}"
         self.cust_name = str(input("Enter Your Name :"))
-        self.cust_no = str(input("Enter Your Phone Number :"))
+        self.cust_no = str(input("Enter Your 10 digit Phone Number with country code (91-) :"))
         if re.match(regex, self.cust_no):
             print("Valid.")
         ticket.read_tno(self)
