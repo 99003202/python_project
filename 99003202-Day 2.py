@@ -1,3 +1,6 @@
+import re
+
+
 class ticket:
     def __init__(self):
         self.ticket_no = 1
@@ -54,11 +57,14 @@ class movie:
 class Customer(ticket, movie):
     def __init__(self):
         self.cust_name = "Default"
-        self.cust_no = 0000000000
+        self.cust_no = 91-0000000000
 
     def cust_det(self):
+        regex = "91-\d{10}"
         self.cust_name = str(input("Enter Your Name :"))
-        self.cust_no = int(input("Enter Your Phone Number :"))
+        self.cust_no = str(input("Enter Your Phone Number :"))
+        if re.match(regex, self.cust_no):
+            print("Valid.")
         ticket.read_tno(self)
         movie.m_det(self)
 
@@ -74,4 +80,5 @@ print (m1.m_timing)
 c1 = Customer()
 c1.cust_det()
 c1.cust_tkt()
+
 
