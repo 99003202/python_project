@@ -3,6 +3,10 @@ f = 0
 # this name_movie function is used to see movie name
 
 
+def cost(ticket):
+    pass
+
+
 def m_name():
     global f
     f = f + 1
@@ -15,7 +19,6 @@ def m_name():
     if movie == 4:
         theatre()
         m_screen_no()
-        return 0
     if f == 1:
         m_screen_no()
 # the screen_no function is used to select screen
@@ -28,6 +31,7 @@ def m_screen_no():
     print("3 : Screen 3")
     a = int(input("Choose your screen : "))
     ticket = int(input("Number of tickets  you want :"))
+    cost(ticket)
     m_timing(a)
 # the timing function is used to select timing for the movie
 
@@ -57,7 +61,7 @@ def m_timing(a):
         print(time1)
         t = input("Select your time :")
         x = time1[t]
-        print("Booking Confirmed , Enjoy your movie at" + x)
+        print("Booking Confirmed , Enjoy your movie at :" + x)
     elif a == 2:
         print("choose your time :")
         print(time2)
@@ -69,9 +73,7 @@ def m_timing(a):
         print(time3)
         t = input("Select yout time :")
         x = time3[t]
-        print("Booking Confirmed Enjoy your movie at" + x)
-
-return 0
+        print("Booking Confirmed Enjoy your movie at :" + x)
 
 
 def movie(m_screen_no):
