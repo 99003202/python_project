@@ -1,15 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec 13 16:21:22 2020
-
-@author: User
-"""
 import re
 
 
 from datetime import datetime
 from datetime import date
-
 
 
 import pandas as pd
@@ -86,7 +79,8 @@ class Customer(ticket, movie):
     def cust_det(self):
         regex = "91-\d{10}"
         self.cust_name = str(input("Enter Your Name :"))
-        self.cust_no = str(input("Enter Your 10 digit Phone Number with country code (91-) :"))
+        self.cust_no = str(input("Enter Your 10 digit Phone "
+                                 "Number with country code(91-): "))
         if re.match(regex, self.cust_no):
             print("Valid.")
         ticket.read_tno(self)
@@ -96,8 +90,8 @@ class Customer(ticket, movie):
         print("***********************\n \t\tTICKET\n***********************")
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        today=date.today()
-        print(current_time,"\t",today)
+        today = date.today()
+        print(current_time, "\t", today)
         print("\nName :", self.cust_name)
         print("Phone Number :", self.cust_no)
         movie.m_show(self)
