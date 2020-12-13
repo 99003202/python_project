@@ -1,4 +1,5 @@
 import re
+#defining base - class ticket
 
 
 class ticket:
@@ -14,6 +15,7 @@ class ticket:
         print("No: of Tickets :", self.ticket_no)
         print("Total Price :", self.ticket_rate)
 
+#defining base - class movie
 
 class movie:
     def __init__(self):
@@ -53,7 +55,7 @@ class movie:
         print("Screen :", self.screen_no)
         movie.f_time(self)
 
-
+#defining class Customer- multiple inheritance from both base classes 
 class Customer(ticket, movie):
     def __init__(self):
         self.cust_name = "Default"
